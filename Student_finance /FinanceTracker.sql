@@ -1,0 +1,2 @@
+CREATE DATABASE student_finance_Tracker;
+USE student_finance_Tracker;
