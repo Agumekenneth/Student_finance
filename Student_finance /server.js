@@ -2,10 +2,14 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const db = require('./config/db'); // ✅ Import the database connection
+const budgetsRoutes = require('./routes/budgets');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+// Routes
+app.use('/api/budgets', budgetsRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
