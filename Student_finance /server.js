@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
-const db = require('./db'); // ✅ Import the database connection
+const db = require('./config/db'); // ✅ Import the database connection
 
 const app = express();
 app.use(cors());
