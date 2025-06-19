@@ -6,6 +6,7 @@ const budgetsRoutes = require('./routes/budgets');
 const userRoutes = require('./routes/userRoutes');
 const transactionRoutes = require('./routes/transactionsRoutes');
 const savingsRoutes = require('./routes/savingsRoutes');
+const dashboardRoutes = require('./routes/dashboard');
 
 const app = express();
 app.use(cors());
@@ -16,6 +17,7 @@ app.use('/api/budgets', budgetsRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/transactions', transactionRoutes);
 app.use('/api/savings', savingsRoutes);
+app.use('/api/dashboard', dashboardRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
