@@ -1,7 +1,11 @@
-// routes/budgets.js
 const express = require('express');
 const router = express.Router();
 const Budget = require('../models/Budget');
+
+// ✅ Test route should come before any dynamic route
+router.get('/test', (req, res) => {
+  res.send('Budgets route works');
+});
 
 // Create a new budget
 router.post('/', async (req, res) => {
