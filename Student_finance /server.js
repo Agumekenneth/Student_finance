@@ -5,6 +5,7 @@ const db = require('./config/db'); // ✅ Import the database connection
 const budgetsRoutes = require('./routes/budgets');
 const userRoutes = require('./routes/userRoutes');
 const transactionRoutes = require('./routes/transactionsRoutes');
+const savingsRoutes = require('./routes/savingsRoutes');
 
 const app = express();
 app.use(cors());
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use('/api/budgets', budgetsRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/transactions', transactionRoutes);
+app.use('/api/savings', savingsRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
